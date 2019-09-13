@@ -2,5 +2,20 @@
   "name": "gatsby-source-sanity-transform-images",
   "version": "0.0.1",
   "keywords": [],
-  "author": "React GraphQL Academy<hello@reactgraphql.academy>"
+  "license": "MIT",
+  "author": "React GraphQL Academy<hello@reactgraphql.academy>",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir . --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "cross-env": "^5.2.1"
+  }
 }
