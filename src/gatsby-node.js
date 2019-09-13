@@ -38,7 +38,7 @@ export const createResolvers = ({
   createResolvers,
   store,
   reporter
-}: GatsbyContext) => {
+}) => {
   const resolvers = {
     SanityImageAsset: {
       localFile: {
