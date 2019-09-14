@@ -61,7 +61,11 @@ query Example {
 
 Thanks for your interest in contributing to this plugin! Pull Requests welcome for any level of improvement, from a small typo to a new section, help us make the project better.
 
-## Pull Requests
+### How to run the tests
+
+`yarn test`
+
+### Pull Requests
 
 To submit a pull request, follow these steps
 
