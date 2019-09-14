@@ -34,8 +34,6 @@ Useful for reduced data usage in development or projects where you want the asse
 
 ## Examples of usage
 
-You
-
 ```GraphQL
 query Example {
   allSanityImageAsset {
