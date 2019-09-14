@@ -1,5 +1,5 @@
-function createRemoteFileNode() {
-  console.log(111);
+function createRemoteFileNode(args) {
+  return args;
 }
 
 module.exports = {
