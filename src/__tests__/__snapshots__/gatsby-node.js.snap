@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createResolvers should extend the SanityImageAsset type adding a localFile field of type File 1`] = `
+Object {
+  "fit": Object {
+    "defaultValue": "crop",
+    "type": Object {},
+  },
+  "format": Object {
+    "defaultValue": "jpg",
+    "type": Object {},
+  },
+  "height": Object {
+    "type": Object {},
+  },
+  "width": Object {
+    "defaultValue": 600,
+    "type": Object {},
+  },
+}
+`;

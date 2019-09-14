@@ -14,7 +14,8 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
-    "prepare": "cross-env NODE_ENV=production npm run build"
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "test": "./node_modules/.bin/jest"
   },
   "peerDependencies": {
     "gatsby": "^2.0.0"
@@ -22,7 +23,21 @@
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
+    "@babel/runtime": "^7.6.0",
     "babel-preset-gatsby-package": "^0.2.4",
     "cross-env": "^5.2.1"
+  },
+  "dependencies": {
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   }
 }

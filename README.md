@@ -70,7 +70,9 @@ To submit a pull request, follow these steps
 1. Fork and clone this repo
 2. Create a branch for your changes
 3. Install dependencies with `yarn`
-4. Make changes locally and commit them
-5. Push your branch to origin
-6. Open a pull request in this repository with a clear title and description and link to any relevant issues
-7. Wait for a maintainer to review your PR
+4. Make changes locally
+5. Make sure tests pass, otherwise update the tests
+6. Commit your changes
+7. Push your branch to origin
+8. Open a pull request in this repository with a clear title and description and link to any relevant issues
+9. Wait for a maintainer to review your PR

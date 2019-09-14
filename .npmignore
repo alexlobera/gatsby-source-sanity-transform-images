@@ -33,3 +33,6 @@ flow-typed
 coverage
 decls
 examples
+
+# tests
+**/__tests__
