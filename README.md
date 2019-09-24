@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/reactgraphqlacademy/gatsby-source-sanity-transform-images/tree/master.svg?style=svg)](https://circleci.com/gh/reactgraphqlacademy/gatsby-source-sanity-transform-images/tree/master)
+
 ## Description
 
 This plugin extends the Gatsby Sanity GraphQL schema to add a `localFile` field to the `SanityImageAsset` type. The field `localFile` returns a `File` type. This enables downloading remote images to local so you have the flexibility to deploy them to a different CDN (or even process them with `gatsby-plugin-sharp` if you need to). This plugin is inspired by the [localFile field from Contentful](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-contentful#download-assets-for-static-distribution).
