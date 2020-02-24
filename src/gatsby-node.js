@@ -8,8 +8,7 @@ export const setFieldsOnGraphQLNodeType = ({ type }) => {
         type: `File`,
         args: {
           width: {
-            type: GraphQLInt,
-            defaultValue: 600
+            type: GraphQLInt
           },
           format: {
             type: GraphQLString,
@@ -44,7 +43,7 @@ export const createResolvers = ({
       localFile: {
         resolve: (source, { width, height, fit, format }) => {
           return createRemoteFileNode({
-            url: `${source.url}?w=${width}&fm=${format}${
+            url: `${source.url}?fm=${format}${width ? `&w=${width}` : ""}${
               height ? `&h=${height}` : ""
             }&fit=${fit}`,
             store,
