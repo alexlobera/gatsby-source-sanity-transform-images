@@ -15,12 +15,19 @@ describe("createResolvers", () => {
     expect(argumentsFirstCall.SanityImageAsset).not.toBeFalsy();
     expect(argumentsFirstCall.SanityImageAsset.localFile).not.toBeFalsy();
 
-    const { url } = argumentsFirstCall.SanityImageAsset.localFile.resolve(
+    const urlSpecificSize = argumentsFirstCall.SanityImageAsset.localFile.resolve(
       { url: "randon-url" },
       { width: 30, height: 20, fit: "crop", format: "jpg" }
-    );
+    ).url;
 
-    expect(url).toBe("randon-url?w=30&fm=jpg&h=20&fit=crop");
+    expect(urlSpecificSize).toBe("randon-url?fm=jpg&w=30&h=20&fit=crop");
+
+    const urlOriginalSize = argumentsFirstCall.SanityImageAsset.localFile.resolve(
+      { url: "randon-url" },
+      { fit: "crop", format: "jpg" }
+    ).url;
+
+    expect(urlOriginalSize).toBe("randon-url?fm=jpg&fit=crop");
   });
 
   it("should extend the SanityImageAsset type adding a localFile field of type File", () => {
