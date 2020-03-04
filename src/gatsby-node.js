@@ -1,5 +1,6 @@
 import { GraphQLInt, GraphQLString } from "gatsby/graphql";
 import { createRemoteFileNode } from "gatsby-source-filesystem";
+import { ImageFormatType } from "./types";
 
 export const setFieldsOnGraphQLNodeType = ({ type }) => {
   if (type.name === `SanityImageAsset`) {
@@ -11,8 +12,7 @@ export const setFieldsOnGraphQLNodeType = ({ type }) => {
             type: GraphQLInt
           },
           format: {
-            type: GraphQLString,
-            defaultValue: "jpg"
+            type: ImageFormatType
           },
           height: {
             type: GraphQLInt
@@ -42,10 +42,9 @@ export const createResolvers = ({
     SanityImageAsset: {
       localFile: {
         resolve: (source, { width, height, fit, format }) => {
+          const url = `${source.url}?fit=${fit}${format ? `&fm=${format}`: ''}${width ? `&w=${width}` : ''}${height ? `&h=${height}` : ''}`;
           return createRemoteFileNode({
-            url: `${source.url}?fm=${format}${width ? `&w=${width}` : ""}${
-              height ? `&h=${height}` : ""
-            }&fit=${fit}`,
+            url,
             store,
             cache,
             createNode,
