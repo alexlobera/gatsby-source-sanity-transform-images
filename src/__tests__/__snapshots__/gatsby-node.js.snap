@@ -7,8 +7,23 @@ Object {
     "type": Object {},
   },
   "format": Object {
-    "defaultValue": "jpg",
-    "type": Object {},
+    "type": Object {
+      "name": "ImageFormat",
+      "values": Object {
+        "JPG": Object {
+          "value": "jpg",
+        },
+        "PJPG": Object {
+          "value": "pjpg",
+        },
+        "PNG": Object {
+          "value": "png",
+        },
+        "WEBP": Object {
+          "value": "webp",
+        },
+      },
+    },
   },
   "height": Object {
     "type": Object {},

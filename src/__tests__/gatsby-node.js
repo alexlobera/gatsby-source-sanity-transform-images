@@ -20,14 +20,14 @@ describe("createResolvers", () => {
       { width: 30, height: 20, fit: "crop", format: "jpg" }
     ).url;
 
-    expect(urlSpecificSize).toBe("randon-url?fm=jpg&w=30&h=20&fit=crop");
+    expect(urlSpecificSize).toBe("randon-url?fit=crop&fm=jpg&w=30&h=20");
 
     const urlOriginalSize = argumentsFirstCall.SanityImageAsset.localFile.resolve(
       { url: "randon-url" },
       { fit: "crop", format: "jpg" }
     ).url;
 
-    expect(urlOriginalSize).toBe("randon-url?fm=jpg&fit=crop");
+    expect(urlOriginalSize).toBe("randon-url?fit=crop&fm=jpg");
   });
 
   it("should extend the SanityImageAsset type adding a localFile field of type File", () => {
