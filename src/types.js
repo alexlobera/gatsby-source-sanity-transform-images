@@ -1,7 +1,7 @@
 import { GraphQLEnumType } from "gatsby/graphql";
 
 export const ImageFormatType = new GraphQLEnumType({
-  name: 'ImageFormat',
+  name: 'SanityTransformImagesImageFormat',
   values: {
     JPG: { value: 'jpg' },
     PJPG: { value: 'pjpg' },
@@ -11,7 +11,7 @@ export const ImageFormatType = new GraphQLEnumType({
 });
 
 export const ImageFitType = new GraphQLEnumType({
-  name: `ImageFit`,
+  name: `SanityTransformImagesImageFit`,
   values: {
     CROP: { value: 'crop', description: 'Crops the image to fill the size you specified when you specify both w and h' },
     CLIP: { value: 'clip', description: 'The image is resized to fit within the bounds you specified without cropping or distorting the image.' },
