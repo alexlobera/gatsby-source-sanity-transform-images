@@ -8,7 +8,7 @@ Object {
   },
   "format": Object {
     "type": Object {
-      "name": "ImageFormat",
+      "name": "SanityTransformImagesImageFormat",
       "values": Object {
         "JPG": Object {
           "value": "jpg",
